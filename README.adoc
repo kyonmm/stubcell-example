@@ -1,0 +1,22 @@
+= StubCellの使い方
+
+Node.jsのStubCellというツールをつかってスタブサーバーを構築します。
+https://github.com/yosuke-furukawa/stubcell
+
+APIの仕様（リクエストのURL, メソッド, レスポンスのステータス、ボディ）を `entry.yaml` というファイルに定義します。
+レスポンスのボディは `entry.yaml` に直接書くこともできますし、相対パス上に保存された JSONファイルを指定することもできます。
+
+NodeJSのインストールは https://nodejs.org/ja/download/ から。
+このリポジトリをクローンして、クローンしたディレクトリ内で下記コマンドで実行できます。
+
+[source,]
+----
+git clone 
+npm install stubcell -g
+# edit entry.yaml, test.json, etc
+stubcell
+# access to http://localhost:8090/
+----
+
+終了するときは、 `Ctrl + C` で終了します。
+
